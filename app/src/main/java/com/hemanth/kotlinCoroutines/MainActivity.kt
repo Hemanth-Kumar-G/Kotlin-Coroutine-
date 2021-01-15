@@ -11,6 +11,8 @@ import com.hemanth.kotlinCoroutines.eachCoroutineExample.retrofit.parallel.Paral
 import com.hemanth.kotlinCoroutines.eachCoroutineExample.retrofit.series.SeriesNetworkCallsActivity
 import com.hemanth.kotlinCoroutines.eachCoroutineExample.retrofit.single.SingleNetworkCallActivity
 import com.hemanth.kotlinCoroutines.eachCoroutineExample.room.RoomDBActivity
+import com.hemanth.kotlinCoroutines.eachCoroutineExample.task.onetask.LongRunningTaskActivity
+import com.hemanth.kotlinCoroutines.eachCoroutineExample.task.twotask.TwoLongRunningTasksActivity
 import com.hemanth.kotlinCoroutines.eachCoroutineExample.timeout.TimeoutActivity
 
 class MainActivity : AppCompatActivity() {
@@ -52,8 +54,12 @@ class MainActivity : AppCompatActivity() {
         startActivity(Intent(this@MainActivity, IgnoreErrorAndContinueActivity::class.java))
     }
 
-    fun startLongRunningTaskActivity(view: View) {}
-    fun startTwoLongRunningTasksActivity(view: View) {}
+    fun startLongRunningTaskActivity(view: View) {
+        startActivity(Intent(this@MainActivity, LongRunningTaskActivity::class.java))
+    }
 
+    fun startTwoLongRunningTasksActivity(view: View) {
+        startActivity(Intent(this@MainActivity, TwoLongRunningTasksActivity::class.java))
+    }
 
 }
