@@ -3,6 +3,7 @@ package com.hemanth.kotlinCoroutines.utils
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.hemanth.kotlinCoroutines.data.api.ApiHelper
+import com.hemanth.kotlinCoroutines.eachCoroutineExample.retrofit.parallel.ParallelNetworkCallsViewModel
 import com.hemanth.kotlinCoroutines.eachCoroutineExample.retrofit.series.SeriesNetworkCallsViewModel
 import com.hemanth.kotlinCoroutines.eachCoroutineExample.retrofit.single.SingleNetworkCallViewModel
 
@@ -16,6 +17,10 @@ class ViewModelFactory(private val apiHelper: ApiHelper) :
         if (modelClass.isAssignableFrom(SeriesNetworkCallsViewModel::class.java)) {
             return SeriesNetworkCallsViewModel(apiHelper) as T
         }
+        if (modelClass.isAssignableFrom(ParallelNetworkCallsViewModel::class.java)) {
+            return ParallelNetworkCallsViewModel(apiHelper) as T
+        }
+
         throw IllegalArgumentException("Unknown class name")
     }
 
