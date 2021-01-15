@@ -8,6 +8,7 @@ import com.hemanth.kotlinCoroutines.eachCoroutineExample.retrofit.parallel.Paral
 import com.hemanth.kotlinCoroutines.eachCoroutineExample.retrofit.series.SeriesNetworkCallsViewModel
 import com.hemanth.kotlinCoroutines.eachCoroutineExample.retrofit.single.SingleNetworkCallViewModel
 import com.hemanth.kotlinCoroutines.eachCoroutineExample.room.RoomDBViewModel
+import com.hemanth.kotlinCoroutines.eachCoroutineExample.timeout.TimeoutViewModel
 
 class ViewModelFactory(private val apiHelper: ApiHelper, private val dbHelper: DatabaseHelper?=null) :
     ViewModelProvider.Factory {
@@ -24,6 +25,9 @@ class ViewModelFactory(private val apiHelper: ApiHelper, private val dbHelper: D
         }
         if (modelClass.isAssignableFrom(RoomDBViewModel::class.java)) {
             return RoomDBViewModel(apiHelper, dbHelper!!) as T
+        }
+        if (modelClass.isAssignableFrom(TimeoutViewModel::class.java)) {
+            return TimeoutViewModel(apiHelper) as T
         }
 
         throw IllegalArgumentException("Unknown class name")

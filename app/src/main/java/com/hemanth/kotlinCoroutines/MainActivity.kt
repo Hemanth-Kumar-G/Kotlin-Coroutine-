@@ -8,6 +8,7 @@ import com.hemanth.kotlinCoroutines.eachCoroutineExample.retrofit.parallel.Paral
 import com.hemanth.kotlinCoroutines.eachCoroutineExample.retrofit.series.SeriesNetworkCallsActivity
 import com.hemanth.kotlinCoroutines.eachCoroutineExample.retrofit.single.SingleNetworkCallActivity
 import com.hemanth.kotlinCoroutines.eachCoroutineExample.room.RoomDBActivity
+import com.hemanth.kotlinCoroutines.eachCoroutineExample.timeout.TimeoutActivity
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -29,7 +30,10 @@ class MainActivity : AppCompatActivity() {
     fun startRoomDatabaseActivity(view: View) {
         startActivity(Intent(this@MainActivity, RoomDBActivity::class.java))
     }
-    fun startTimeoutActivity(view: View) {}
+    fun startTimeoutActivity(view: View) {
+        startActivity(Intent(this@MainActivity, TimeoutActivity::class.java))
+    }
+
     fun startTryCatchActivity(view: View) {}
     fun startExceptionHandlerActivity(view: View) {}
     fun startIgnoreErrorAndContinueActivity(view: View) {}
