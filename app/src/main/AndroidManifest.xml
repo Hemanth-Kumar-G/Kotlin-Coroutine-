@@ -21,6 +21,8 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".eachCoroutineExample.retrofit.series.SeriesNetworkCallsActivity" />
+
     </application>
 
 </manifest>

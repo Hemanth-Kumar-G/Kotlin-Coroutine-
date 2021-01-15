@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import com.hemanth.kotlinCoroutines.eachCoroutineExample.retrofit.series.SeriesNetworkCallsActivity
 import com.hemanth.kotlinCoroutines.eachCoroutineExample.retrofit.single.SingleNetworkCallActivity
 
 class MainActivity : AppCompatActivity() {
@@ -16,7 +17,10 @@ class MainActivity : AppCompatActivity() {
         startActivity(Intent(this@MainActivity, SingleNetworkCallActivity::class.java))
     }
 
-    fun startSeriesNetworkCallsActivity(view: View) {}
+    fun startSeriesNetworkCallsActivity(view: View) {
+        startActivity(Intent(this@MainActivity, SeriesNetworkCallsActivity::class.java))
+    }
+
     fun startParallelNetworkCallsActivity(view: View) {}
     fun startRoomDatabaseActivity(view: View) {}
     fun startTimeoutActivity(view: View) {}
