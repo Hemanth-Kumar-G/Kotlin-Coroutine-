@@ -23,6 +23,7 @@
 
         <activity android:name=".eachCoroutineExample.retrofit.series.SeriesNetworkCallsActivity" />
         <activity android:name=".eachCoroutineExample.retrofit.parallel.ParallelNetworkCallsActivity" />
+        <activity android:name=".eachCoroutineExample.room.RoomDBActivity" />
 
     </application>
 

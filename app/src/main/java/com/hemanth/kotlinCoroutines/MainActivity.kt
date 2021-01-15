@@ -7,6 +7,7 @@ import android.view.View
 import com.hemanth.kotlinCoroutines.eachCoroutineExample.retrofit.parallel.ParallelNetworkCallsActivity
 import com.hemanth.kotlinCoroutines.eachCoroutineExample.retrofit.series.SeriesNetworkCallsActivity
 import com.hemanth.kotlinCoroutines.eachCoroutineExample.retrofit.single.SingleNetworkCallActivity
+import com.hemanth.kotlinCoroutines.eachCoroutineExample.room.RoomDBActivity
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,7 +26,9 @@ class MainActivity : AppCompatActivity() {
     fun startParallelNetworkCallsActivity(view: View) {
         startActivity(Intent(this@MainActivity, ParallelNetworkCallsActivity::class.java))
     }
-    fun startRoomDatabaseActivity(view: View) {}
+    fun startRoomDatabaseActivity(view: View) {
+        startActivity(Intent(this@MainActivity, RoomDBActivity::class.java))
+    }
     fun startTimeoutActivity(view: View) {}
     fun startTryCatchActivity(view: View) {}
     fun startExceptionHandlerActivity(view: View) {}
